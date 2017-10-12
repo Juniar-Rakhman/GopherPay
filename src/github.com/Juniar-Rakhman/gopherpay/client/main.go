@@ -7,12 +7,16 @@ import (
 func main() {
 	var option payment.PaymentOption
 
-	account := payment.CreateCreditAccount(
+	option = payment.CreateCreditAccount(
 		"Debra Ingram",
 		"1111-2222-3333-4444",
 		5,
 		2021,
 		123)
 
-	option.ProcessPayment(account.OwnerName(), 500)
+	option.ProcessPayment(500)
+
+	money := payment.CreateCashAccount()
+
+	money.ProcessPayment(300)
 }

@@ -12,5 +12,6 @@ func CreateCashAccount() *Cash {
 
 func (c Cash) ProcessPayment(amount float32) bool {
 	fmt.Println("Processing a cash transaction")
+	fmt.Println("receiving",amount)
 	return true
 }
